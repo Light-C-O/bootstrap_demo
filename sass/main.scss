@@ -1,5 +1,7 @@
 // Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Yarndings+20&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Yarndings+20&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=Story+Script&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 
 // @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
@@ -10,15 +12,15 @@ $enable-rounded: false;
 // $enable-shadows: true;
 
 //Theme colors
-$primary: #3B38A0;
-$secondary: #CBF3BB;
+$primary: #ffd000;
+$secondary: #d638f2;
 $dark: #ECF4E8;
-$light: #FFBBE1;
+$light: #0f00e8;
 $success: #B3BFFF;
-$white: #93BFC7;
-$warning: #CD2C58;
+$white: #ff0000;
+$warning: #2600ff;
 $info: #FFE100;
-$danger: #7A85C1;
+$danger: #ff0000;
 
 
 //variables + mixins
@@ -71,7 +73,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 // Font Families
-$font-family-base: 'Yarndings 20', sans-serif;
+ $font-family-base: 'Yarndings 20', sans-serif;
+//$font-family-base: 'Zalando Sans Expanded', sans-serif;
+// $font-family-base: 'Bitcount Grid Single', sans-serif;
 
 //Import Bootstrap.scss
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
