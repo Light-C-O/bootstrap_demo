@@ -1,0 +1,80 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Yarndings+20&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+//Import functions
+@import "../node_modules/bootstrap/scss/functions.scss";
+//Globals
+$enable-rounded: false;
+// $enable-shadows: true;
+
+//Theme colors
+$primary: #3B38A0;
+$secondary: #CBF3BB;
+$dark: #ECF4E8;
+$light: #FFBBE1;
+$success: #B3BFFF;
+$white: #93BFC7;
+$warning: #CD2C58;
+$info: #FFE100;
+$danger: #7A85C1;
+
+
+//variables + mixins
+@import "../node_modules/bootstrap/scss/variables.scss";
+@import "../node_modules/bootstrap/scss/mixins.scss";
+
+//Custom colours
+$custom-colors: (
+    "primary-light": rgb(224, 102, 255),
+    "secondary-light": rgb(255, 255, 102),
+);
+
+//merge our colours with the theme
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Colour manipulation functions
+@each $color, $val in $colors {
+    // Base color
+    .bg-#{$color}-500 {
+        background-color: $val
+    }
+
+    // Lightened versions
+    .bg-#{$color}-100 {
+        background-color: tint-color($val, 80%);
+    } 
+    .bg-#{$color}-200 {
+        background-color: tint-color($val, 60%);
+    } 
+    .bg-#{$color}-300 {
+        background-color: tint-color($val, 40%);
+    }
+    .bg-#{$color}-400 {
+        background-color: tint-color($val, 20%);
+    }
+
+    // Darkened versions
+    .bg-#{$color}-600 {
+        background-color: shade-color($val, 20%)
+    }
+    .bg-#{$color}-700 {
+        background-color: shade-color($val, 40%)
+    }
+    .bg-#{$color}-800 {
+        background-color: shade-color($val, 60%)
+    }
+    .bg-#{$color}-900 {
+        background-color: shade-color($val, 80%)
+    }
+}
+
+// Font Families
+$font-family-base: 'Yarndings 20', sans-serif;
+
+//Import Bootstrap.scss
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../node_modules/bootstrap/scss/functions";
+
